@@ -26,92 +26,92 @@ function draw() {
   
   if (estado === "inicio") {
     image(fondos[0], 0, 0);
-    dibujarBoton(50, 400, 100, 50);// Botón para ir a la imagen 1
+    dibujarBoton(50, 400, 100, 50);
     textSize (15);
     fill (0);
     text ("JUGAR", 75,430);
-    dibujarBoton(490, 400, 100, 50);  // Segundo botón
+    dibujarBoton(490, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("CREDITOS",500,430);
     cuento(0);
   } else if (estado === "img1") {
     image(fondos[1], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 2
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("VOLVER", 70, 430);
     cuento(1);
   } else if (estado === "img2") {
     image(fondos[2], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 3
+    dibujarBoton(50, 400, 100, 50);
     textSize (15);
     fill (0);
     text ("SIGUIENTE",63,430);
     cuento(2);
   } else if (estado === "img3") {
     image(fondos[3], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 4
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63,430);
     cuento(3);
   } else if (estado === "img4") {
     image(fondos[4], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 5
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63,430);
     cuento(4);
   } else if (estado === "img5") {
     image(fondos[5], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 6
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63 ,430);
     cuento(5);
   } else if (estado === "img6") {
     image(fondos[6], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 7
+    dibujarBoton(50, 400, 100, 50);
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63,430);
     cuento(6);
   } else if (estado === "img7") {
     image(fondos[7], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 8
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63 ,430);
     cuento(7);
   } else if (estado === "img8") {
     image(fondos[8], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para ir a la imagen 9
+    dibujarBoton(50, 400, 100, 50);
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63 ,430);
     cuento(8);
   } else if (estado === "img9") {
     image(fondos[9], 0, 0);
-    dibujarBoton(50, 400, 140, 50); // Botón para ir a img10
+    dibujarBoton(50, 400, 140, 50); 
     textSize (11);
     fill (0);
     text ("INVESTIGAR EL CASO", 63 ,430);
-    dibujarBoton(490, 400, 140, 50);  // Botón para ir a img11
+    dibujarBoton(490, 400, 140, 50); 
     textSize (10);
     fill (0);
     text ("NO INVESTIGAR EL CASO", 500 ,430);
     cuento(9);
   } else if (estado === "img10") {
     image(fondos[10], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para volver al inicio
+    dibujarBoton(50, 400, 100, 50); 
     textSize (15);
     fill (0);
     text ("SIGUIENTE", 63 ,430);
     cuento(11);
   } else if (estado === "img11") {
     image(fondos[11], 0, 0);
-    dibujarBoton(50, 400, 100, 50); // Botón para volver al inicio
+    dibujarBoton(50, 400, 100, 50);
     textSize (15);
     fill (0);
     text ("VOLVER", 65 ,430);
@@ -238,7 +238,7 @@ function mousePressed() {
     if (detectarBoton(50, 400, 100, 50)) {
       estado = "img2";
     } else if (detectarBoton(490, 400, 100, 50)) {
-      estado = "img1"; // Acción del segundo botón
+      estado = "img1"; 
   }
     }
   } else if (estado === "img2") {
@@ -277,7 +277,7 @@ function mousePressed() {
     if (detectarBoton(50, 400, 100, 50)) {
       estado = "img10";
     } else if (detectarBoton(490, 400, 100, 50)) {
-      estado = "img11"; // Acción del segundo botón
+      estado = "img11"; 
     }
   } else if (estado === "img10") {
     if (detectarBoton(50, 400, 100, 50)) {
@@ -285,7 +285,7 @@ function mousePressed() {
     }
   } else if (estado === "img11") {
     if (detectarBoton(50, 400, 100, 50)) {
-      estado = "inicio"; // Volver al inicio
+      estado = "inicio"; 
     }
   } else if (estado === "img12") {
     if (detectarBoton(50, 400, 100, 50)) {
@@ -359,17 +359,15 @@ function cuento(i) {
     fill (203, 62, 111);
     text (texto[i], 50, 20, 500);
  }
-// Función para dibujar botones
 function dibujarBoton(px, py, pan, pal) {
   if (detectarBoton(px, py, pan, pal)) {
-    fill(203, 62, 111); // Cambia de color cuando el mouse está encima
+    fill(203, 62, 111);
   } else {
-    fill(64, 147, 100); // Color normal del botón
+    fill(64, 147, 100);
   }
-  rect(px, py, pan, pal, pal / 4); // Dibuja el botón con esquinas redondeadas
+  rect(px, py, pan, pal, pal / 4);
 }
 
-// Función para detectar si el mouse está sobre un botón
 function detectarBoton(x, y, an, al) {
   return mouseX > x && mouseX < x + an && mouseY > y && mouseY < y + al;
 }
